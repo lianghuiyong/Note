@@ -2,44 +2,40 @@
 
 macOS 10.12.6 (16G29)
 
-1.`brew install homebrew/nginx/openresty`
+1. brew install pcre openssl
 
-2.下载openssl源码
+2. brew install homebrew/nginx/openresty
 
-3.编译config
-```
-./configure --prefix=/usr/local/Cellar/openresty \
---with-openssl=/usr/local/Cellar/openssl-1.0.2l \
---with-cc-opt="-I/usr/local/Cellar/pcre/8.41/include" \
---with-ld-opt="-L/usr/local/Cellar/pcre/8.41/lib" \
--j4 \
---with-luajit
-```
+3. Path 
 
-4.make
+   export NGINX_HOME=/usr/local/Cellar/openresty/1.11.2.5/nginx/sbin:
 
-5.make install
+   export PATH=$PATH:$NGINX_HOME
 
+4. Code 
 
-二 .ngx_lua
+   ```
+   worker_processes  1;        #nginx worker 数量
+   error_log /Users/huiyong/Documents/project/work/logs/error.log;   #指定错误日志文件路径
+   events {
+       worker_connections 1024;
+   }
 
-1。下载luajit
+   http {
+       server {
+           listen 6767;
+           location / {
+               default_type text/html;
+               content_by_lua '
+                   ngx.say("Ping!  You got here because you have no cookies!")
+               ';
+           }
+       }
+   }
+   ```
 
-2。lua-nginx-module-0.10.10
+5. nginx -c /Users/huiyong/Documents/project/work/conf/nginx.conf
 
-3.ngx_devel_kit-0.3.0
+6. curl  127.0.0.1:6767
 
-4.nginx-1.12.1
-
- ./configure --prefix=/usr/local/Cellar/openresty/nginx \
-         --with-ld-opt="-Wl,-rpath,/usr/local/Cellar/openresty/luajit/lib" \
-         --with-cc-opt="-I/usr/local/Cellar/pcre/8.41/include" \
-         --with-ld-opt="-L/usr/local/Cellar/pcre/8.41/lib" \
-         --with-openssl=/usr/local/Cellar/openssl-1.0.2l \
-         --add-module=/Users/huiyong/Documents/project/work/ngx_devel_kit-0.3.0 \
-         --add-module=/Users/huiyong/Documents/project/work/lua-nginx-module-0.10.10
-         
- 5.make -j4
- 
- 6.make install
- 
+   Ping!  You got here because you have no cookies!
