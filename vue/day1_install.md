@@ -1,69 +1,62 @@
 macOS 10.12.6 (16G29)
 
-
+在线教程：http://www.runoob.com/w3cnote/vue2-start-coding.html
 
 1. 安装Node
 
    ```
-   brew install node
+   brew install nodejs
+   ```
+   获取nodejs模块安装目录访问权限
+
+   ```
+   sudo chmod -R 777 /usr/local/lib/node_modules/
    ```
 
-2. 安装webpack
+2. 安装淘宝镜像
 
+   大家都知道国内直接使用 npm 的官方镜像是非常慢的，这里推荐使用淘宝 NPM 镜像。
+
+   ```
+   npm install -g cnpm --registry=https://registry.npm.taobao.org
+   ```
+
+   这样就可以使用 cnpm 命令来安装模块了：
+
+   ```
+   cnpm install [name]
+   ```
+
+3. 安装webpack
    ```
    npm install -g webpack
    ```
 
-3. 安装gulp
-
+4. 安装vue脚手架
    ```
-   npm install -g gulp
-   ```
-
-4. 创建项目目录，在项目目录下执行命令，初始化package.json文件
-
-   ```
-   npm init
+   npm install vue-cli -g
    ```
 
+5. 在硬盘上找一个文件夹放工程用的，在终端中进入该目录
 
+   ```
+   cd 目录路径
+   ```
 
+6. 根据模板创建项目
 
+   ```
+   vue init webpack-simple 工程名字<工程名字不能用中文>
+   ```
 
+7. 安装 vue 路由模块`vue-router`和网络请求模块`vue-resource`
 
-5. 出错提示
+   ```
+   cnpm install vue-router vue-resource --save
+   ```
 
-今天在安装npm包时遇到了这个错误，出现如下提示：
+8. 启动项目
 
-```
-npm WARN package.json xxx@0.0.0 No repository field.
-npm WARN package.json xxx@0.0.0 No README data
-
-```
-
-看字面意思大概是缺少README文件和repository字段，也就是说缺少项目的基本描述文件和仓库字段。此时，我们只需在项目的根目录下创建一个README文件，并且在package.json里面添加如下配置即可:
-
-```
-{
-    ...
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/yourname/repositoryname.git"
-    },
-    ...
-}
-
-```
-
-但作为测试项目或者练习用，没有仓库地址怎么办？其实也很简单，只需在package.json里面做如下配置即可:
-
-```
-{
-    ...
-    "private": true,
-    ...
-}
-
-```
-
-以这种方式把项目声明为私有，这样npm就不会再提示配置repository及readme了。
+   ```
+   npm run dev
+   ```
