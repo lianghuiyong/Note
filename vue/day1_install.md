@@ -36,26 +36,31 @@ macOS 10.12.6 (16G29)
    ```
    npm install vue-cli -g
    ```
-
-5. 在硬盘上找一个文件夹放工程用的，在终端中进入该目录
-
-   ```
-   cd 目录路径
-   ```
-
-6. 根据模板创建项目
-
-   ```
-   vue init webpack-simple 工程名字<工程名字不能用中文>
-   ```
-
-7. 安装 vue 路由模块`vue-router`和网络请求模块`vue-resource`
+5. 安装 vue 路由模块`vue-router`和网络请求模块`vue-resource`
 
    ```
    cnpm install vue-router vue-resource --save
    ```
 
-8. 启动项目
+6. 在硬盘上找一个文件夹放工程用的，在终端中进入该目录
+
+   ```
+   cd 目录路径
+   ```
+
+7. 根据模板创建项目
+
+   ```
+   vue init webpack-simple 工程名字<工程名字不能用中文>
+   ```
+
+8. 进入工程目录，载入node_modules库
+
+   ```
+   cnpm install
+   ```
+
+9. 启动项目
 
    ```
    npm run dev
