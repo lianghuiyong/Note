@@ -6,7 +6,7 @@ macOS 10.12.6 (16G29)
 
 2. brew install homebrew/nginx/openresty
 
-3. Path 
+3. vim .bash_profile
 
    export NGINX_HOME=/usr/local/Cellar/openresty/1.11.2.5/nginx/sbin:
 
