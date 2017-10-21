@@ -68,8 +68,8 @@ tar xvf ngx_openresty-1.9.7.1.tar.gz
 vim ~/.bash_profile
 
 ```
-PATH=/usr/local/openresty/nginx/sbin:$PATH
-export PATH
+export NGINX_HOME=/usr/local/openresty/nginx/sbin:
+export PATH=$PATH:$NGINX_HOME
 ```
 
 source .bash_profile
