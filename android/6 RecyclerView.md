@@ -31,6 +31,7 @@ manager
  setOrientation(LinearLayoutManager.HORIZONTAL)
  
  mRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));//这里用线性宫格显示 类似于grid view
+                                new GridLayoutManager(this, 4, 1, false)
  mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));//这里用线性宫格显示 类似于瀑布流
 ```
 
