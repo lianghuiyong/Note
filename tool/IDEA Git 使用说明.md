@@ -15,9 +15,7 @@ $ git config --global user.email “lianghuiyong@outlook.com”
 
 4、节点
 
-[Git - 简易指南](http://www.bootcss.com/p/git-guide/)
-
-[Git教程- 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+[《Git - 简易指南》](http://www.bootcss.com/p/git-guide/)
 
 [《Pro Git》第二版（简体中文版）](https://bingohuang.gitbooks.io/progit2/content/)
 
