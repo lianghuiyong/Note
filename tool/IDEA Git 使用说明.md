@@ -5,8 +5,21 @@
 $ git config --global user.name "梁惠涌"
 $ git config --global user.email “lianghuiyong@outlook.com”
 ```
-##### Git 解点
-1、远程仓库（remote）、本地仓库（local）、分支、节点(http://www.bootcss.com/p/git-guide/)
+##### Git 需了解点
+
+1、远程仓库（remote）
+
+2、本地仓库（local）
+
+3、分支
+
+4、节点
+
+[Git - 简易指南](http://www.bootcss.com/p/git-guide/)
+
+[Git教程- 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
+[《Pro Git》第二版（简体中文版）](https://bingohuang.gitbooks.io/progit2/content/)
 
 ##### 编译器与插件
 
