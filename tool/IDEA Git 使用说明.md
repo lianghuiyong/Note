@@ -35,13 +35,13 @@ $ git config --global user.email “lianghuiyong@outlook.com”
 
 **2、新建分支**
 
-![新建分支](http://oeqej1j2m.bkt.clouddn.com/%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.gif)
+![新建分支](./screenshot/新建分支.gif)
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.mp4)
 
 
 **3、合并分支**
 
-![合并分支](http://oeqej1j2m.bkt.clouddn.com/%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF.gif)
+![合并分支](./screenshot/合并分支.gif)
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF.mp4)
 
 
@@ -52,13 +52,13 @@ $ git config --global user.email “lianghuiyong@outlook.com”
 --mixed是reset的默认参数。
 它将重置index和HEAD回滚到指定节点的状态。本地文件内容不会发生改变。需要修改后commit push 一次！
 ```
-![回滚节点](http://oeqej1j2m.bkt.clouddn.com/%E5%9B%9E%E6%BB%9A%E8%8A%82%E7%82%B9.gif)
+![回滚节点](./screenshot/回滚节点.gif)
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E5%9B%9E%E6%BB%9A%E8%8A%82%E7%82%B9.mp4)
 
 
 **5、删除分支**
 
-![删除分支](http://oeqej1j2m.bkt.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF.gif)
+![删除分支](./screenshot/删除分支.gif)
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF.mp4)
 
 
