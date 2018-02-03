@@ -29,7 +29,7 @@ $ git config --global user.email “lianghuiyong@outlook.com”
 
 **1、新建项目提交到GitHub仓库**
 
-![新建项目提交到GitHub仓库](http://oeqej1j2m.bkt.clouddn.com/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE%E6%8F%90%E4%BA%A4%E5%88%B0github%E4%BB%93%E5%BA%93.gif)
+![新建项目提交到GitHub仓库](./screenshot/新建项目提交到github仓库.gif)
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE%E6%8F%90%E4%BA%A4%E5%88%B0github%E4%BB%93%E5%BA%93.mp4)
 
 
