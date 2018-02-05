@@ -1,3 +1,5 @@
+![](http://oeqej1j2m.bkt.clouddn.com/%E6%A0%87%E9%A2%98_IDEA_Git.jpg "")
+
 [Git 下载](https://git-scm.com/downloads)
 
 ##### Git 配置
