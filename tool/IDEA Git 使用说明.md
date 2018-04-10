@@ -62,3 +62,48 @@ $ git config --global user.email “lianghuiyong@outlook.com”
 [视频下载](http://oeqej1j2m.bkt.clouddn.com/%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF.mp4)
 
 
+```
+一：常规办法
+1.删除无用的分支
+$ git branch -d <branch_name>
+2.删除无用的tag
+$ git tag -d <tag_name>
+3.清理本地版本库
+$ git gc --prune=now
+
+二：高级办法
+注意高级办法会导致push冲突，需要强制提交，其他人pull也会遇到冲突，建议重新克隆。
+！！！注意这些操作都很危险，建议找个示例库进行测试，确保自己完全掌握之后再实际操作。
+
+1.完全重建版本库
+$ rm -rf .git
+$ git init
+$ git add .
+$ git cm "first commit"
+$ git remote add origin <your_github_repo_url>
+$ git push -f -u origin master
+
+2.有选择性的合并历史提交
+$ git rebase -i <first_commit>
+
+会进入一个如下所示的文件
+  1 pick ba07c7d add bootstrap theme and format import
+  2 pick 7d905b8 add newline at file last line
+  3 pick 037313c fn up_first_char rename to caps
+  4 pick 34e647e add fn of && use for index.jsp
+  5 pick 0175f03 rename common include
+  6 pick 7f3f665 update group name && update config
+
+将想合并的提交的pick改成s，如
+  1 pick ba07c7d add bootstrap theme and format import
+  2 pick 7d905b8 add newline at file last line
+  3 pick 037313c fn up_first_char rename to caps
+  4 s 34e647e add fn of && use for index.jsp
+  5 pick 0175f03 rename common include
+  6 pick 7f3f665 update group name && update config
+
+这样第四个提交就会合并进入第三个提交。
+等合并完提交之后再运行
+$ git push -f
+$ git gc --prune=now
+```
