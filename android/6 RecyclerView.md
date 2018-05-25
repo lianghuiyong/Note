@@ -23,7 +23,7 @@
     myGuestAdapter.setOnLoadMoreListener(this, recyclerView);
 ```
 
-manager
+###  Manager
 ```
  mRecyclerView.setLayoutManager(new LinearLayoutManager(this));//这里用线性显示 类似于listview
  
@@ -35,13 +35,13 @@ manager
  mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL));//这里用线性宫格显示 类似于瀑布流
 ```
 
-隐藏滑动到边界阴影
+### 隐藏滑动到边界阴影
 
 ```
 android:overScrollMode="never"
 ```
 
-RecyclerView 固定高度可选优化
+###  RecyclerView 固定高度可选优化
 ```
 recyclerView.setHasFixedSize(false);
 ```
@@ -61,4 +61,29 @@ ScrollView + RecyclerView
             android:nestedScrollingEnabled="false"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
+```
+### 滑动到position
+```
+manager.scrollToPosition(15)
+```
+
+### 滑动距离监听
+```
+mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+    private int totalDy = 0;
+    @Override
+    public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        totalDy -= dy;
+    }
+});
+```
+
+```
+mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+    private int totalDy = 0;
+    @Override
+    public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+        totalDy -= dy;
+    }
+});
 ```
